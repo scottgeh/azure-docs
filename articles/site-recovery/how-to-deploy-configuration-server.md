@@ -12,7 +12,7 @@ ms.author: anoopkv
 
 # Deploy a configuration server
 
-You deploy an on-premises configuration server when you use the [Azure Site Recovery](site-recovery-overview.md) service for disaster recovery of VMware VMs and physical servers to Azure. WThe configuration server coordinates communications between on-premises VMware and Azure, and manages data replication. This article walks you through the steps needed to deploy the configuration server.
+You deploy an on-premises configuration server when you use the [Azure Site Recovery](site-recovery-overview.md) service for disaster recovery of VMware VMs and physical servers to Azure. The configuration server coordinates communications between on-premises VMware and Azure, and manages data replication. This article walks you through the steps needed to deploy the configuration server.
 
 ## Prerequisites
 
@@ -75,7 +75,7 @@ If you want to add an additional NIC to the configuration server, do that before
 
 1. In the vSphere Client inventory, right-click the VM and select **Edit Settings**.
 2. In **Hardware**, click **Add** > **Ethernet Adapter**. Then click **Next**.
-3. Select and adapter type, and a network. 
+3. Select an adapter type, and a network. 
 4. To connect the virtual NIC when the VM is turned on, select **Connect at power on**. Click **Next** > **Finish**, and then click **OK**.
  
 
@@ -95,7 +95,7 @@ If you want to add an additional NIC to the configuration server, do that before
 1. In the configuration server management wizard > **Setup connectivity**, select the NIC that will receive replication traffic. Then click **Save**. You can't change this setting after it's been configured.
 2. In **Select Recovery Services vault**, select your Azure subscription, and the relevant resource group and vault.
 3. In **Install third-party software**, accept the license agreeemtn, and click **Download and Install**, to install MySQL Server.
-4. Click **Install VMware PowerLCI**. Make sure all browser windows are closed before you do this. Then click **Continue**
+4. Click **Install VMware PowerCLI**. Make sure all browser windows are closed before you do this. Then click **Continue**
 5. In **Validate appliance configuration**, prerequisites will be verified before you continue.
 6. In **Configure vCenter Server/vSphere ESXi server**, specify the FQDN or IP address of the vCenter server, or vSphere host, on which VMs you want to replicate are located. Specify the port on which the server is listening, and a friendly name to be used for the VMware server in the vault.
 7. Specify credentials that will be used by the configuration server to connect to the VMware server. Site Recovery uses these credentials to automatically discover VMware VMs that are available for replication. Click **Add**, and then click **Continue**.
