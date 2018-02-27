@@ -68,7 +68,7 @@ The way in which you scale your servers depends on your preference for a scale-u
 
 ## Control network bandwidth
 
-After you've used the [the Deployment Planner tool](site-recovery-deployment-planner.md) to calculate the bandwidth you need for replication (the initial replication and then delta), you can control the amount of bandwidth used for replication using a couple of options:
+3After you've used the [the Deployment Planner tool](site-recovery-deployment-planner.md) to calculate the bandwidth you need for replication (the initial replication and then delta), you can control the amount of bandwidth used for replication using a couple of options:
 
 * **Throttle bandwidth**: VMware traffic that replicates to Azure goes through a specific process server. You can throttle bandwidth on the machines running as process servers.
 * **Influence bandwidth**: You can influence the bandwidth used for replication by using a couple of registry keys:
@@ -81,7 +81,7 @@ After you've used the [the Deployment Planner tool](site-recovery-deployment-pla
 2. In the snap-in, click **Change Properties**.
 
     ![Screenshot of Azure Backup MMC snap-in option to change properties](./media/site-recovery-vmware-to-azure/throttle1.png)
-3. On the **Throttling** tab, select **Enable internet bandwidth usage throttling for backup operations**. Set the limits for work and non-work hours. Valid ranges are from 512 Kbps to 102 Mbps per second.
+3. On the **Throttling** tab, select **Enable internet bandwidth usage throttling for backup operations**. Set the limits for work and non-work hours. Valid ranges are from 512 Kbps to 1023 Mbps per second.
 
     ![Screenshot of Azure Backup Properties dialog box](./media/site-recovery-vmware-to-azure/throttle2.png)
 
